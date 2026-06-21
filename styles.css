@@ -145,6 +145,61 @@ main {
   border: 1px solid var(--rule);
 }
 
+.memories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.memory-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent-soft);
+  border-radius: 3px;
+  padding: 1.75rem 1.75rem 1.5rem;
+}
+
+.memory-card header { margin-bottom: 1rem; }
+
+.memory-card h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin: 0;
+  color: var(--ink);
+}
+
+.memory-meta {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.memory-text {
+  margin: 0 0 0.9rem;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.memory-date {
+  margin: 1rem 0 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+.form-heading {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin: 2.5rem 0 0;
+  color: var(--ink);
+}
+
 .memory-form {
   display: flex;
   flex-direction: column;
