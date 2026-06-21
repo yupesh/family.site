@@ -1,0 +1,203 @@
+:root {
+  --bg: #faf7f2;
+  --paper: #fffdf8;
+  --ink: #2a2622;
+  --muted: #6b6359;
+  --accent: #8b6b3d;
+  --accent-soft: #c9b48a;
+  --rule: #e6ddcc;
+  --serif: "Cormorant Garamond", "Georgia", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+a:hover { color: var(--ink); }
+
+.hero {
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 0 4rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 1.75rem;
+  justify-content: center;
+  padding: 1.5rem 1.5rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+}
+.nav a {
+  border-bottom: none;
+  color: var(--muted);
+}
+.nav a:hover { color: var(--accent); }
+
+.hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.subtitle {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin: 0 0 3rem;
+}
+
+.dates {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--muted);
+  margin: 1.25rem 0;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.section {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.section:last-of-type { border-bottom: none; }
+
+.section h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 0 0 1.5rem;
+  color: var(--ink);
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--accent-soft);
+  margin-top: 0.75rem;
+}
+
+.section p { margin: 0 0 1.1rem; }
+.section ul { margin: 0 0 1.1rem; padding-left: 1.2rem; }
+.section li { margin-bottom: 0.5rem; }
+
+.placeholder {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.section-form {
+  background: var(--paper);
+  margin: 3rem -1.5rem 0;
+  padding: 3.5rem 1.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--rule);
+}
+
+.memory-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.memory-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.memory-form input[type="text"],
+.memory-form input[type="email"],
+.memory-form textarea {
+  font-family: var(--sans);
+  font-size: 1rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: #fff;
+  color: var(--ink);
+  resize: vertical;
+}
+
+.memory-form input:focus,
+.memory-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.file-label input { font-size: 0.9rem; }
+
+.memory-form button {
+  align-self: flex-start;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  padding: 0.7rem 1.8rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.2s;
+}
+.memory-form button:hover { background: #6e5430; }
+
+.form-note {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+}
+.footer p { margin: 0.3rem 0; }
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .nav { gap: 0.75rem 1rem; font-size: 0.85rem; padding: 1rem; }
+  .hero-inner { padding-top: 2.5rem; }
+  .section { padding: 2.5rem 0; }
+  .section h2 { font-size: 1.6rem; }
+  .section-form { padding: 2.5rem 1.25rem; }
+}
