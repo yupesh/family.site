@@ -118,6 +118,14 @@ main {
   color: var(--ink);
 }
 
+.sub-h {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.35rem;
+  color: var(--ink);
+  margin: 2rem 0 0.6rem;
+}
+
 .section h2::after {
   content: "";
   display: block;
