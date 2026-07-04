@@ -27,6 +27,22 @@ body {
 a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
 a:hover { color: var(--ink); }
 
+.site-header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+.site-title {
+  display: block;
+  text-align: center;
+  padding: 1.5rem 1.5rem 0.75rem;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  color: var(--ink);
+  border-bottom: none;
+  letter-spacing: 0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
 .hero {
   background: var(--paper);
   border-bottom: 1px solid var(--rule);
@@ -110,6 +126,22 @@ main {
 }
 .section:last-of-type { border-bottom: none; }
 
+.section h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 2.4rem;
+  margin: 0 0 1.5rem;
+  color: var(--ink);
+}
+.section h1::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: var(--accent-soft);
+  margin-top: 0.75rem;
+}
+
 .section h2 {
   font-family: var(--serif);
   font-weight: 500;
@@ -117,6 +149,66 @@ main {
   margin: 0 0 1.5rem;
   color: var(--ink);
 }
+
+.page-lede {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin: 0 0 2rem;
+  font-style: italic;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+.section-card {
+  display: block;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent-soft);
+  border-radius: 3px;
+  padding: 1.25rem 1.4rem;
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.section-card:hover {
+  color: var(--ink);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(60, 45, 25, 0.08);
+  border-left-color: var(--accent);
+}
+.section-card h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin: 0 0 0.35rem;
+  color: var(--ink);
+}
+.section-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 3rem 0 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--serif);
+  font-size: 1.05rem;
+}
+.page-nav a { border-bottom: none; }
+.page-nav .prev::before { content: "← "; color: var(--muted); }
+.page-nav .next::after { content: " →"; color: var(--muted); }
+.page-nav .spacer { flex: 1; }
 
 .sub-h {
   font-family: var(--serif);
