@@ -376,6 +376,61 @@ main {
   margin-top: 0.5rem;
 }
 
+.tree {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.25rem 0 2.5rem;
+}
+.tree ul {
+  list-style: none;
+  padding-left: 1.35rem;
+  margin: 0.4rem 0 0.9rem;
+  border-left: 2px solid var(--rule);
+}
+.tree li {
+  margin: 0.55rem 0;
+  padding-left: 0.45rem;
+}
+.tree strong {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.tree .self > strong { color: var(--accent); }
+.tree .d {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.skhemy {
+  margin: 1.5rem 0 2.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--paper);
+  padding: 0.75rem 1rem;
+}
+.skhemy summary {
+  cursor: pointer;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--accent);
+}
+.skhemy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 12px;
+  margin-top: 1rem;
+}
+.skhemy-grid a { border-bottom: none; }
+.skhemy-grid img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: #fff;
+}
+
 .footer {
   text-align: center;
   padding: 3rem 1.5rem 4rem;
