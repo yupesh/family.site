@@ -21,6 +21,7 @@ body {
   font-family: var(--sans);
   font-size: 17px;
   line-height: 1.7;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -379,10 +380,27 @@ main {
 /* Графическое дерево: карточки с соединительными линиями */
 .ftree {
   overflow-x: auto;
-  padding: 0.5rem 1rem 1.5rem;
+  padding: 0.5rem 1rem 1rem;
   margin: 1rem 0 2rem;
   width: 100vw;
   margin-left: calc(50% - 50vw);
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-soft) #efe8da;
+}
+.ftree::-webkit-scrollbar {
+  height: 12px;
+}
+.ftree::-webkit-scrollbar-track {
+  background: #efe8da;
+  border-radius: 6px;
+}
+.ftree::-webkit-scrollbar-thumb {
+  background: var(--accent-soft);
+  border-radius: 6px;
+  border: 2px solid #efe8da;
+}
+.ftree::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
 .ftree > ul {
   width: max-content;
