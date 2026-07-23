@@ -1,6 +1,8 @@
 claude.md
 poisk-rodoslovnaya.md
 HANDOFF.md
+.claude/settings.local.json
+.hooks/
 .DS_Store
 ok-photos/
 .playwright-mcp/
